@@ -1,0 +1,116 @@
+button
+{
+    width: 100%;
+    height: 100%;
+    /* min-width: 5px;
+    min-height: 5px; */
+}
+
+#game_field
+{
+    width: 600px;
+    height: 600px;
+    margin:0 auto;
+}
+
+table
+{
+    width: 100%;
+    height: 100%;
+}
+
+td
+{
+    text-align: center;
+}
+
+/* td
+{
+    min-width: 10px;
+    min-height: 10px;
+}
+
+tr
+{
+    min-width: 10px;
+    min-height: 10px;
+} */
+
+/* #temp
+{
+    width: 100px;
+    height: 100px;
+} */
+
+
+#level_wrapper
+{
+    width: 100%;
+    height: 30px;
+}
+
+#level
+{
+    font-size: large;
+    width: 60px;
+    text-align: center;
+    float: right;
+    margin-right: 15%;
+    border: none;
+}
+
+#header
+{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+}
+
+#information
+{
+    width:15%;
+    text-align: center;
+    float: left;
+    margin-left: 7%;
+}
+
+
+#records
+{
+    float: right;
+    text-align: center;
+    width: 20%;
+}
+
+h3{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 15%;
+    float: left;
+}
+
+#timer
+{
+    width: 60px;
+    margin-right: 15%;
+    float: right;
+}
+
+#btn_start_game{
+    height: 70px;
+    width: 200px;
+    text-align: center;
+    font-size: large;
+}
+
+#btn_start_wrapper
+{
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+}

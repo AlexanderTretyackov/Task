@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Игра на Javascript</title>
+  <link rel="stylesheet" href="lab2.css" />
+  <script src="lab2.js"></script>
+</head>
+
+<body>
+    <div id="header"><h1>Цветные квадраты</h1></div>
+    <div id="information">
+        <h3>Информация</h3>
+        <div id="level_wrapper">
+            <p>Уровень:</p>
+            <input id="level" type="number" value="1" readonly></input>
+        </div>
+        <div id="time_wrapper">
+            <p>Время, сек:</p>
+            <input id="timer" type="number" value="120" readonly></input>
+        </div>
+    </div>
+    <div id="records">
+        <h3>Таблица рекордов</h3>
+        <table id="table_records">
+            <tr><th>Имя игрока</th><th>Уровень</th><th>Время</th></tr>
+            <tr><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td></tr>
+        </table>
+    </div>       
+    <div id="game_field"></div>
+    
+    <div id="btn_start_wrapper">
+        <button id="btn_start_game"> Начать игру</button>
+    </div>
+    <script type="text/javascript">
+        var btn_start = document.getElementById("btn_start_game");
+        btn_start.onclick = start_game;
+        window.onunload = onunload_function;
+
+        var level_item = localStorage.getItem('level');
+        var time_item = localStorage.getItem('time');
+
+        if(level_item != null && time_item != null)
+            countinue_game(Number.parseInt(level_item), Number.parseInt(time_item));
+        
+        var temp = JSON.parse(localStorage.getItem("records"));
+        if(temp == null)
+            window.records = [];
+        else
+            window.records = temp;
+
+        var table_records = document.getElementById("table_records");
+        for(let i = 0; i < window.records.length; i++)
+        {
+            table_records.rows[i + 1].cells[0].innerHTML = window.records[i].name;
+            table_records.rows[i + 1].cells[1].innerHTML = window.records[i].level;
+            table_records.rows[i + 1].cells[2].innerHTML = window.records[i].time;
+        }
+    </script>
+</body>
+</html>
+
